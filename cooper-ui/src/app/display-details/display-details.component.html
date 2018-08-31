@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>User</th>
+    <th>Url</th>
+    <th>Repos</th>
+  </tr>
+  <tr *ngFor="let usr of user" style="height: 100px; overflow-y: scroll; line-height: 14px;">
+    <td>{{usr.login}}</td>
+    <td>{{usr.url}}</td>
+    <td>
+      <table>
+        <tr>
+          <th>Repo Name</th>
+          <th>CreatedAt</th>
+          <th>Link</th>
+        </tr>
+        <tr *ngFor="let repo of usr.repos">
+          <td>{{repo.name}}</td>
+          <td>{{repo.created_at}}</td>
+          <td>
+            <a [href]="repo.html_url">{{repo.name}}</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>

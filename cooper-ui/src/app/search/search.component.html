@@ -1,0 +1,12 @@
+<form>
+  <div id="custom-search-input" class="search-container">
+    <div class="height-100">
+      <div class="serch-input">
+        <input id="searchTxtBox" max="128" name="searchTxtBox" [(ngModel)]="searchInput" (ngModelChange)="getUser($event);" placeholder="Search for User in github">
+      </div>
+      <div class="search-icon">
+        <mat-icon style="font-size: 38px; line-height:.9;">search</mat-icon>
+      </div>
+    </div>
+  </div>
+</form>
